@@ -10,8 +10,16 @@
         "128": "./static/tennis-128x128.png"
     },
     "background": {
-        "scripts": ["./background.js"]
+        "scripts": ["jquery-3.3.1.min.js", "background.js"]
     },
+    "content_scripts": [
+        {
+            "matches": ["https://rioc.civicpermits.com/Permits/*"],
+            "css": ["tennisPage.css"],
+            "js": ["jquery-3.3.1.min.js", "tennisPage.js"]
+        }
+        
+    ],
     "options_page": "./options.html",
     "browser_action": {
         "default_popup": "popup.html"

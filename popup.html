@@ -1,12 +1,48 @@
-<!-- This page will be the pop up page when you click the extension icon -->
-
-<!DOCTYPE html>
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ 'browser_action' field in manifest.json contains the 'default_popup' key with
+ value 'popup.html'.
+ -->
 <html>
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
-<body>
-  <h1>I'm the popup</h1>
-</body>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      html, body {
+        margin:30px;
+        width:300px;
+        height:100px;
+      }
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='popup.js'></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+  </head>
+  <body>
+    <br>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="court">Please select your desire court</label>
+          <select id="inputCourt" class="form-control">
+            <option selected value="1">Tennis Court 1</option>
+            <option value="2">Tennis Court 2</option>
+            <option value="3">Tennis Court 3</option>
+            <option value="4">Tennis Court 4</option>
+            <option value="5">Tennis Court 5</option>
+            <option value="6">Tennis Court 6</option>
+          </select>
+        </div>
+      </div>
+      <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+    <br>
+    <br>
+  </body>
+
 </html>
